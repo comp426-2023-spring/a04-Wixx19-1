@@ -4,8 +4,8 @@ import minimist from 'minimist'
 import express from 'express'
 import { playRps, playRpsls } from './lib/rpsls'
 
-const argv = minimist(process.args.slice(2));
-let port = argv.port || 5000
+const args = minimist(process.args.slice(2));
+let port = args.port || 5000
 const app = express(); 
 
 app.used(express.json());
