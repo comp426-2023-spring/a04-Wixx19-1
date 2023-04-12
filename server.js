@@ -24,20 +24,20 @@ app.get('/app/rpsls', (req,res) => {
 });
 
 //Queries
-app.get('/app/rps/play/', (req,res) => {
+app.get('/app/rps/play', (req,res) => {
     res.status(200).send(JSON.stringify(playRps(req.query.shot))).end();
 });
 
-app.get('/app/rpsls/play/', (req,res) => {
+app.get('/app/rpsls/play', (req,res) => {
     res.status(200).send(JSON.stringify(playRpsls(req.query.shot))).end();
 });
 
 //JSON bodies
-app.post('/app/rps/play/', (req,res) => {
+app.post('/app/rps/play', (req,res) => {
     res.status(200).send(JSON.stringify(playRps(req.body.shot))).end();
 });
 
-app.post('/app/rpsls/play/', (req,res) => {
+app.post('/app/rpsls/play', (req,res) => {
     res.status(200).send(JSON.stringify(playRpsls(req.body.shot))).end();
 });
 
@@ -54,4 +54,6 @@ app.all('*', (req,res) => {
     res.status(404).send('404 NOT FOUND').end();
 });
 
-app.listen(port);
+app.listen(port, () => {
+    console.log('Server listening on port ${port}');
+});
