@@ -1,5 +1,5 @@
 {
-  "name": "a04-wixx19",
+  "name": "a04-wixx19-1",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -21,7 +21,7 @@
   "homepage": "https://github.com/comp426-2023-spring/a04-Wixx19-1#readme",
   "type": "module",
   "dependencies": {
-    "express": "4.18.2",
-    "minimist":"^1.2.8"
+    "express": "^4.18.2",
+    "minimist": "^1.2.8"
   }
 }
