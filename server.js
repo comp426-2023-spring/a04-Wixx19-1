@@ -2,7 +2,7 @@
 
 import minimist from 'minimist';
 import express from 'express';
-import { playRps, playRpsls } from './lib/rpsls'
+import { playRps, playRpsls } from './lib/rpsls.js'
 
 const args = minimist(process.args.slice(2));
 let port = args.port || 5000
