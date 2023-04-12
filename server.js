@@ -8,8 +8,8 @@ const args = minimist(process.argv.slice(2));
 let port = args.port || 5000
 const app = express(); 
 
-app.used(express.json());
-app.used(express.urlencoded({extented: true}));
+app.use(express.json());
+app.use(express.urlencoded({extented: true}));
 //get 
 app.get('/app', (req, res) => {
     res.status(200).send('200 OK').end();
