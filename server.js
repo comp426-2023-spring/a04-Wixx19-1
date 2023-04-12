@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import minimist from 'minimist';
-import express from 'express'
+import express from 'express';
 import { playRps, playRpsls } from './lib/rpsls'
 
 const args = minimist(process.args.slice(2));
@@ -10,7 +10,7 @@ const app = express();
 
 app.used(express.json());
 app.used(express.urlencoded({extented: true}));
-
+//get 
 app.get('/app', (req, res) => {
     res.status(200).send('200 OK').end();
 });
