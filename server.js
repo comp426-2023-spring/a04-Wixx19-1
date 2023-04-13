@@ -47,11 +47,11 @@ app.get('/app/rpsls/play/:shot', (req,res) => {
     res.status(200).send(JSON.stringify(playRpsls(req.params.shot))).end();
 });
 
-app.post('/app/rps/play/:shot', (req,res) => {
+app.get('/app/rps/play/:shot', (req,res) => {
     res.status(200).send(JSON.stringify(playRps(req.params.shot))).end();
 });
 
-app.all('*', (req,res) => {
+app.get('*', (req,res) => {
     res.status(404).send('404 NOT FOUND').end();
 });
 
