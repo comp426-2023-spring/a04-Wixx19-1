@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import minimist from "minimist";
+import minimist from 'minimist';
 import express from "express";
 
 import { playRps, playRpsls} from "./lib/rpsls.js";
