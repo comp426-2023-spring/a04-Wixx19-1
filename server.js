@@ -2,10 +2,11 @@
 
 import minimist from 'minimist';
 import express from 'express';
+
 import { playRps, playRpsls } from './lib/rpsls.js'
 
 const args = minimist(process.argv.slice(2));
-let port = args.port || 5000
+const port = args['port'] || 5000
 const app = express(); 
 
 app.use(express.json());
